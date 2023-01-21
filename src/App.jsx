@@ -1,6 +1,6 @@
 import React from "react";
-import Nav from "./Component/Nav";
 import Home from "./Pages/Home/Home";
+import Nav from "./Pages/Shared/Navbar/Nav";
 
 const App = () => {
   return (
