@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Theme Demo",
+    "catagory": [
+      {
+        "name": "Homepages",
+        "subcatagory": [
+          "Home 01 - Classic",
+          "Home 02 - Trendy Style Hot",
+          "Home 03 - In Vogue",
+          "Home 04 - High Fashion Hot",
+          "Home 05 - Surfing",
+          "Home 06 - SuperMarket Hot",
+          "Home 07 - Electronics",
+          "Home 08 - Large Catalogs",
+          "Home 09 - Pet Supplies Hot",
+          "Home 10 - Jewelry",
+          "Home 11 - Health & Beauty",
+          "Home 12 - Men Fashion",
+          "Home 13 - Winter Sport"
+        ]
+      },
+      {
+        "name": "Homepages",
+        "subcatagory": [
+          "Home 14 - Automotive 1",
+          "Home 15 - Automotive 2 Hot",
+          "Home 16 - Games",
+          "Home 17 - Gym",
+          "Home 18 - Shoes",
+          "Home 19 - Swimwear 1",
+          "Home 20 - Furniture",
+          "Home 21 - Yoga New",
+          "Home 22 - Eyes Wears New",
+          "Home 23 - Plant+ Garden New",
+          "Home 24 - Bicycle New",
+          "Home 25 - Swimwear 2 New"
+        ]
+      },
+      {
+        "name": "Spotlights",
+        "subcatagory": [
+          "Multiple Headers",
+          "Multiple Footers",
+          "Sections On Every Page",
+          "Powerful Configuration",
+          "Premium Features",
+          "Lifetime Free Updates",
+          "Bulk Editor",
+          "Product Video On Hover",
+          "Dynamic Browser Tab",
+          "RTL Layout Hot"
+        ]
+      },
+      {
+        "name": "Main Features",
+        "subcatagory": [
+          "Multiple Menu Layouts",
+          "Quick Shop (3 Designs)",
+          "Quick Edit Cart",
+          "Multitasking Function",
+          "Mobile Sticky Toolbar New",
+          "Different Mobile Menu Hot",
+          "Mobile Headers",
+          "Mobile Product Pages",
+          "Before You Leave Popup",
+          "LookBook",
+          "Sticky Promotion New"
+        ]
+      },
+      {
+        "name": "Main Features",
+        "subcatagory": [
+          "Instant Search",
+          "GDPR",
+          "Ask An Expert",
+          "Recent Sales Popup (Fake)",
+          "Shipping Threshold",
+          "Multiple Currencies",
+          "Multiple Languages",
+          "Side Cart",
+          "Quick View",
+          "Marquee Function "
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Shop",
+    "catagory": [
+      {
+        "name": "Homepages",
+        "subcatagory": [
+          "Home 01 - Classic",
+          "Home 02 - Trendy Style Hot",
+          "Home 03 - In Vogue",
+          "Home 04 - High Fashion Hot"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Product",
+    "catagory": [
+      {
+        "name": "Homepages",
+        "subcatagory": [
+          "Home 01 - Classic",
+          "Home 02 - Trendy Style Hot",
+          "Home 03 - In Vogue",
+          "Home 04 - High Fashion Hot"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Blog",
+    "catagory": [
+      {
+        "name": "Homepages",
+        "subcatagory": [
+          "Home 01 - Classic",
+          "Home 02 - Trendy Style Hot",
+          "Home 03 - In Vogue",
+          "Home 04 - High Fashion Hot"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pages",
+    "catagory": [
+      {
+        "name": "Homepages",
+        "subcatagory": [
+          "Home 01 - Classic",
+          "Home 02 - Trendy Style Hot",
+          "Home 03 - In Vogue",
+          "Home 04 - High Fashion Hot"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "New In",
+    "catagory": [
+      {
+        "name": "Homepages",
+        "subcatagory": [
+          "Home 01 - Classic",
+          "Home 02 - Trendy Style Hot",
+          "Home 03 - In Vogue",
+          "Home 04 - High Fashion Hot"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Trend",
+    "catagory": [
+      {
+        "name": "Homepages",
+        "subcatagory": [
+          "Home 01 - Classic",
+          "Home 02 - Trendy Style Hot",
+          "Home 03 - In Vogue",
+          "Home 04 - High Fashion Hot"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Collections",
+    "catagory": [
+      {
+        "name": "Homepages",
+        "subcatagory": [
+          "Home 01 - Classic",
+          "Home 02 - Trendy Style Hot",
+          "Home 03 - In Vogue",
+          "Home 04 - High Fashion Hot"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Buy yourchoice",
+    "catagory": [
+      {
+        "name": "Homepages",
+        "subcatagory": [
+          "Home 01 - Classic",
+          "Home 02 - Trendy Style Hot",
+          "Home 03 - In Vogue",
+          "Home 04 - High Fashion Hot"
+        ]
+      }
+    ]
+  }
+]

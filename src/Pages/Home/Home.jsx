@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const Home = () => {
-    return (
-        <div>
-            this is home
-        </div>
-    );
+  return <div className="h-screen bg-teal-100 flex items-center justify-center text-4xl">home</div>;
 };
 
 export default Home;
