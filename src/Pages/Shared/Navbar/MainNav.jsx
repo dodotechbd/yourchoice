@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import { FiSearch } from "react-icons/fi";
+import { RxHamburgerMenu } from "react-icons/rx";
 import NavSearch from "./NavSearch";
+import SubNav from "./SubNav";
 
 const MainNav = () => {
+  const [isMenu, setIsMenu] = useState(false);
   const navLink = (
     <>
       <li className="hover:underline">
@@ -16,10 +20,20 @@ const MainNav = () => {
     </>
   );
   return (
-    <div className="flex items-center gap-8 px-4 pt-5">
-      <h1 className="text-3xl uppercase font-bold">YourChoice</h1>
-      <ul className="flex gap-8 font-medium text-[#2D2D2D]">{navLink}</ul>
-      <NavSearch />
+    <div>
+      <div className="flex items-center gap-8 px-4 lg:pt-5 lg:py-0 py-2">
+        <RxHamburgerMenu
+          onClick={() => setIsMenu(true)}
+          className="text-2xl lg:hidden"
+        />
+        <FiSearch className="text-xl lg:hidden" />
+        <h1 className="lg:text-3xl text-2xl uppercase font-bold">YourChoice</h1>
+        <ul className="lg:flex gap-8 font-medium text-[#2D2D2D] hidden">
+          {navLink}
+        </ul>
+        <NavSearch />
+      </div>
+      <SubNav menu={isMenu} closeMenu={() => setIsMenu(false)} />
     </div>
   );
 };

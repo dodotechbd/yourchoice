@@ -16,14 +16,14 @@ const NavSearch = () => {
     "cloths",
   ];
   return (
-    <>
+    <div className="lg:block hidden">
       <div
         onClick={() => setIsModalOpen(false)}
-        className={`fixed ${
+        className={`fixed z-10 ${
           !isModalOpen && "hidden"
         } top-0 left-0 w-full h-full`}
       />
-      <div className="relative flex items-center bg-gray-100 rounded py-3">
+      <div className="relative z-10 flex items-center bg-gray-100 rounded py-3">
         <FiSearch size={24} className="mx-3" />
         <input
           type="text"
@@ -63,7 +63,7 @@ const NavSearch = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 [
   {
     "name": "Theme Demo",
+    "tip": { "title": "New", "color": "#06BFE2" },
     "catagory": [
       {
         "name": "Homepages",
@@ -101,6 +102,7 @@
   },
   {
     "name": "Product",
+    "tip": { "title": "Hot", "color": "#FFBB49" },
     "catagory": [
       {
         "name": "Homepages",
@@ -185,6 +187,7 @@
   },
   {
     "name": "Buy yourchoice",
+    "tip": { "title": "Sale", "color": "#EF6454" },
     "catagory": [
       {
         "name": "Homepages",
