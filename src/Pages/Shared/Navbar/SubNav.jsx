@@ -31,7 +31,7 @@ const SubNav = ({ menu, closeMenu }) => {
         }}
         className={`${
           !menu && "hidden"
-        } fixed top-0 left-0 bg-black/50 w-full h-full`}
+        } fixed top-0 lg:hidden left-0 bg-black/50 w-full h-full`}
       />
       <div
         className={`fixed z-10 overflow-auto lg:hidden bg-white duration-700 text-gray-800 w-11/12 h-full top-0 ${
