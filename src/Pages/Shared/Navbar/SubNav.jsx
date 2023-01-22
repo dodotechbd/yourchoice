@@ -8,6 +8,7 @@ import { TfiAngleRight } from "react-icons/tfi";
 const SubNav = ({ menu, closeMenu }) => {
   const [navData, setNavData] = useState("");
   const [menuData, setMenuData] = useState("");
+  const [subMenuData, setSubMenuData] = useState("");
   const [isHover, setIsHover] = useState("");
   const fetchSubNavs = async () => {
     const navs = await (await fetch("subnavs.json")).json();
@@ -16,10 +17,25 @@ const SubNav = ({ menu, closeMenu }) => {
   useEffect(() => {
     fetchSubNavs();
   }, []);
+  console.log(menuData);
   return (
     <div>
       <div
-        className={`fixed z-10 lg:hidden bg-white duration-700 text-gray-800 w-11/12 h-full top-0 ${
+        onClick={() => {
+          if (subMenuData) {
+            setSubMenuData("");
+          } else if (menuData) {
+            setMenuData("");
+          } else {
+            closeMenu();
+          }
+        }}
+        className={`${
+          !menu && "hidden"
+        } fixed top-0 left-0 bg-black/50 w-full h-full`}
+      />
+      <div
+        className={`fixed z-10 overflow-auto lg:hidden bg-white duration-700 text-gray-800 w-11/12 h-full top-0 ${
           menu ? "left-0" : "left-[-500px]"
         }`}
       >
@@ -36,13 +52,13 @@ const SubNav = ({ menu, closeMenu }) => {
                 <li key={idx}>
                   <div>
                     <button
-                      onClick={() => setMenuData(idx)}
+                      onClick={() => setMenuData(idx + 1)}
                       className="py-3 flex justify-between items-center border-b w-full text-start px-4"
                     >
                       <p className="relative">
                         {items?.name}
                         {items?.tip && (
-                          <div className="absolute text-white text-sm capitalize top-0 -right-16 text-right w-full">
+                          <div className="absolute text-white text-sm capitalize top-0 -right-16 text-right w-full h-full">
                             <button
                               style={{
                                 background: items?.tip?.color,
@@ -63,8 +79,8 @@ const SubNav = ({ menu, closeMenu }) => {
                       <TfiAngleRight />
                     </button>
                     <div
-                      className={`absolute top-0 bg-white w-full duration-500 h-full ${
-                        menuData === idx ? "left-0" : "left-[-500px]"
+                      className={`absolute overflow-auto top-0 bg-white z-10 w-full duration-500 h-full ${
+                        menuData === idx + 1 ? "left-0" : "left-[-500px]"
                       }`}
                     >
                       <div className="flex items-center py-3 bg-gray-200">
@@ -76,6 +92,61 @@ const SubNav = ({ menu, closeMenu }) => {
                         </button>
                         <h1 className="text-center w-full">{items?.name}</h1>
                       </div>
+                      <ul className="">
+                        <li>
+                          <button className="w-full text-start py-3 px-4 border-b">
+                            {items?.name}
+                          </button>
+                        </li>
+                        {items?.catagory?.map((item, idx) => (
+                          <li>
+                            <button
+                              onClick={() => setSubMenuData(idx + 1)}
+                              className="w-full flex justify-between items-center text-start py-3 px-4 border-b"
+                            >
+                              {item?.name}
+                              <TfiAngleRight />
+                            </button>
+                            <div
+                              className={`absolute overflow-auto top-0 bg-white z-10 w-full duration-500 h-full ${
+                                subMenuData === idx + 1
+                                  ? "left-0"
+                                  : "left-[-500px]"
+                              }`}
+                            >
+                              <div className="flex items-center py-3 bg-gray-200">
+                                <button
+                                  onClick={() => setSubMenuData(false)}
+                                  className="left-2 absolute"
+                                >
+                                  <HiArrowLongLeft size={35} />
+                                </button>
+                                <h1 className="text-center w-full">
+                                  {item?.name}
+                                </h1>
+                              </div>
+                              <ul className="">
+                                <li>
+                                  <button className="w-full text-start py-3 px-4 border-b">
+                                    {item?.name}
+                                  </button>
+                                </li>
+                                {item?.subcatagory?.map((data, idx) => (
+                                  <li>
+                                    <button
+                                      // onClick={() => setSubMenuData(idx + 1)}
+                                      className="w-full flex justify-between items-center text-start py-3 px-4 border-b"
+                                    >
+                                      {data}
+                                      <TfiAngleRight />
+                                    </button>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </li>
@@ -90,14 +161,16 @@ const SubNav = ({ menu, closeMenu }) => {
             <>
               {navData?.map((item, idx) => (
                 <div
-                  onMouseEnter={() => setIsHover(idx)}
+                  onMouseEnter={() => setIsHover(idx + 1)}
                   onMouseLeave={() => setIsHover("")}
                   key={idx}
                 >
                   <li className="pb-4 relative">
                     <button
                       className={`border-b relative ${
-                        isHover === idx ? "border-black" : "border-transparent"
+                        isHover === idx + 1
+                          ? "border-black"
+                          : "border-transparent"
                       }`}
                     >
                       {item?.name}
@@ -126,7 +199,7 @@ const SubNav = ({ menu, closeMenu }) => {
                     whileInView={{ y: 0 }}
                     transition={{ duration: 0.001 }}
                     className={`absolute ${
-                      isHover === idx ? "transition duration-500" : "hidden"
+                      isHover === idx + 1 ? "transition duration-500" : "hidden"
                     } left-0 bg-white shadow-[15px_0_15px_0px_rgba(0,0,0,0.2)] px-4 flex items-start py-5 w-full min-h-[50%]`}
                   >
                     {item?.catagory?.map((data, idx) => (
