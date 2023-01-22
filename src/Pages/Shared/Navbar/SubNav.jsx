@@ -17,7 +17,6 @@ const SubNav = ({ menu, closeMenu }) => {
   useEffect(() => {
     fetchSubNavs();
   }, []);
-  console.log(menuData);
   return (
     <div>
       <div

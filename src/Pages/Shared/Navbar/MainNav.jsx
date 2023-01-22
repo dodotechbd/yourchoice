@@ -6,6 +6,7 @@ import SubNav from "./SubNav";
 
 const MainNav = () => {
   const [isMenu, setIsMenu] = useState(false);
+  const [search, setSearch] = useState(false);
   const navLink = (
     <>
       <li className="hover:underline">
@@ -26,12 +27,15 @@ const MainNav = () => {
           onClick={() => setIsMenu(true)}
           className="text-2xl lg:hidden"
         />
-        <FiSearch className="text-xl lg:hidden" />
+        <FiSearch
+          onClick={() => setSearch(true)}
+          className="text-xl lg:hidden"
+        />
         <h1 className="lg:text-3xl text-2xl uppercase font-bold">YourChoice</h1>
         <ul className="lg:flex gap-8 font-medium text-[#2D2D2D] hidden">
           {navLink}
         </ul>
-        <NavSearch />
+        <NavSearch search={search} closeSearch={() => setSearch(false)} />
       </div>
       <SubNav menu={isMenu} closeMenu={() => setIsMenu(false)} />
     </div>
