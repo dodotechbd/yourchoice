@@ -3,6 +3,7 @@ import { FiSearch } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import NavSearch from "./NavSearch";
 import SubNav from "./SubNav";
+import UserNav from "./UserNav";
 
 const MainNav = () => {
   const [isMenu, setIsMenu] = useState(false);
@@ -36,6 +37,7 @@ const MainNav = () => {
           {navLink}
         </ul>
         <NavSearch search={search} closeSearch={() => setSearch(false)} />
+        <UserNav />
       </div>
       <SubNav menu={isMenu} closeMenu={() => setIsMenu(false)} />
     </div>
