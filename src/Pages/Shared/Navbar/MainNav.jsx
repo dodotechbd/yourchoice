@@ -23,15 +23,18 @@ const MainNav = () => {
   );
   return (
     <div>
-      <div className="flex items-center gap-8 px-4 lg:pt-5 lg:py-0 py-2">
-        <RxHamburgerMenu
-          onClick={() => setIsMenu(true)}
-          className="text-2xl lg:hidden"
-        />
-        <FiSearch
-          onClick={() => setSearch(true)}
-          className="text-xl lg:hidden"
-        />
+      <div className="flex w-full items-center lg:gap-8 px-4 lg:pt-5 lg:py-0 py-2">
+        <div className="lg:hidden flex justify-start gap-6 w-full items-center">
+          <button>
+            <RxHamburgerMenu
+              onClick={() => setIsMenu(true)}
+              className="text-2xl"
+            />
+          </button>
+          <button>
+            <FiSearch onClick={() => setSearch(true)} className="text-xl" />
+          </button>
+        </div>
         <h1 className="lg:text-3xl text-2xl uppercase font-bold">YourChoice</h1>
         <ul className="lg:flex gap-8 font-medium text-[#2D2D2D] hidden">
           {navLink}

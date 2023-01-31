@@ -28,7 +28,7 @@ const NavSearch = ({ search, closeSearch }) => {
         } fixed top-0 lg:hidden left-0 bg-black/50 w-full h-full`}
       />
       <div
-        className={`fixed top-0 left-0 lg:hidden duration-700 text-gray-800 w-11/12 h-full bg-white ${
+        className={`fixed top-0 left-0 lg:hidden duration-700 text-gray-800 w-[86%] h-full bg-white ${
           search ? "left-0" : "left-[-500px]"
         }`}
       >
