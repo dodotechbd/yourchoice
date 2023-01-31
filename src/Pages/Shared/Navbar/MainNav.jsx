@@ -35,7 +35,7 @@ const MainNav = () => {
             <FiSearch onClick={() => setSearch(true)} className="text-xl" />
           </button>
         </div>
-        <h1 className="lg:text-3xl text-2xl uppercase font-bold">YourChoice</h1>
+        <h1 className="lg:text-3xl text-2xl uppercase font-extrabold">YourChoice</h1>
         <ul className="lg:flex gap-8 font-medium text-[#2D2D2D] hidden">
           {navLink}
         </ul>
