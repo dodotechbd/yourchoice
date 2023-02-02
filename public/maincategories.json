@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Living Room",
+    "img": "https://cdn.shopify.com/s/files/1/0064/4435/1539/files/banner-custom-1_570x.jpg?v=1658374621",
+    "discount": "30",
+    "url": "#"
+  },
+  {
+    "name": "Bedroom",
+    "img": "https://cdn.shopify.com/s/files/1/0064/4435/1539/files/banner-custom-2_570x.jpg?v=1658374633",
+    "discount": "30",
+    "url": "#"
+  },
+  {
+    "name": "Dining Room",
+    "img": "https://cdn.shopify.com/s/files/1/0064/4435/1539/files/banner-custom-3_570x.jpg?v=1658374645",
+    "discount": "30",
+    "url": "#"
+  },
+  {
+    "name": "Cafe Table & Chair",
+    "img": "https://cdn.shopify.com/s/files/1/0064/4435/1539/files/banner-custom-4_570x.jpg?v=1658374659",
+    "discount": "30",
+    "url": "#"
+  },
+  {
+    "name": "Rugs",
+    "img": "https://cdn.shopify.com/s/files/1/0064/4435/1539/files/banner-custom-5_570x.jpg?v=1658374669",
+    "discount": "30",
+    "url": "#"
+  },
+  {
+    "name": "Home Decor",
+    "img": "https://cdn.shopify.com/s/files/1/0064/4435/1539/files/banner-custom-6_570x.jpg?v=1658374680",
+    "discount": "30",
+    "url": "#"
+  }
+]
