@@ -198,8 +198,8 @@ const SubNav = ({ menu, closeMenu }) => {
                     whileInView={{ y: 0 }}
                     transition={{ duration: 0.001 }}
                     className={`absolute ${
-                      isHover === idx + 1 ? "transition duration-500" : "hidden"
-                    } left-0 bg-white shadow-[15px_0_15px_0px_rgba(0,0,0,0.2)] px-4 flex items-start py-5 w-full min-h-[50%]`}
+                      isHover !== idx + 1 && "hidden"
+                    } transition duration-500 left-0 bg-white shadow-[15px_0_15px_0px_rgba(0,0,0,0.2)] px-4 flex items-start py-5 w-full min-h-[50%]`}
                   >
                     {item?.catagory?.map((data, idx) => (
                       <div key={idx} className="w-full">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const MainCategory = () => {
+  const [hover, setHover] = useState("");
   const [items, setItems] = useState([]);
   const fetchItems = async () => {
     const navs = await (await fetch("maincategories.json")).json();
@@ -12,8 +13,19 @@ const MainCategory = () => {
   return (
     <div className="grid lg:grid-cols-3">
       {items?.map((item, idx) => (
-        <div key={idx} className="w-full h-full relative">
-          <img src={item?.img} alt="" className="h-full w-full scale-100 bg-center bg-cover" />
+        <div
+          onMouseEnter={() => setHover(idx + 1)}
+          onMouseLeave={() => setHover("")}
+          key={idx}
+          className="w-full h-full relative"
+        >
+          <img
+            src={item?.img}
+            alt=""
+            className={`relative object-cover object-center ${
+              hover === idx + 1 ? "scale-110 z-[-3] duration-500" : "100 z-[-2]"
+            }`}
+          />
           <div className="absolute left-0 top-0 mt-12 w-full h-full flex flex-col justify-center text-white text-center">
             <div className="mx-auto">
               <div className="w-12 h-[2px] bg-white"></div>
