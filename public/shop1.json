@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "name": " Sofa",
+    "image": "https://cdn.shopify.com/s/files/1/0064/4435/1539/files/Home-Furniture-Brand-1_220x.jpg?v=1658374693"
+  },
+  {
+    "id": "2",
+    "name": "Sectional Sofa",
+    "image": "https://cdn.shopify.com/s/files/1/0064/4435/1539/files/Home-Furniture-Brand-2_220x.jpg?v=1658374702"
+  },
+  {
+    "id": "3",
+    "name": "Chair",
+    "image": "https://cdn.shopify.com/s/files/1/0064/4435/1539/files/Home-Furniture-Brand-3_220x.jpg?v=1658374718"
+  },
+  {
+    "id": "4",
+    "name": "Bedrooms",
+    "image": "https://cdn.shopify.com/s/files/1/0064/4435/1539/files/Home-Furniture-Brand-4_220x.jpg?v=1658374731"
+  },
+  {
+    "id": "5",
+    "name": "Tv Cabinet",
+    "image": "https://cdn.shopify.com/s/files/1/0064/4435/1539/files/Home-Furniture-Brand-5_220x.jpg?v=1658374740"
+  }
+]
