@@ -35,7 +35,7 @@ const SubNav = ({ menu, closeMenu }) => {
       />
       <div
         className={`fixed z-10 overflow-auto lg:hidden bg-white duration-700 text-gray-800 w-[86%] h-full top-0 ${
-          menu ? "left-0" : "left-[-500px]"
+          menu ? "left-0" : "left-[-5000px]"
         }`}
       >
         <div className="flex items-center justify-between px-4 py-3">
@@ -197,7 +197,7 @@ const SubNav = ({ menu, closeMenu }) => {
                     initial={{ y: -10 }}
                     whileInView={{ y: 0 }}
                     transition={{ duration: 0.001 }}
-                    className={`absolute ${
+                    className={`fixed z-10 ${
                       isHover !== idx + 1 && "hidden"
                     } transition duration-500 left-0 bg-white shadow-[15px_0_15px_0px_rgba(0,0,0,0.2)] px-4 flex items-start py-5 w-full min-h-[50%]`}
                   >
