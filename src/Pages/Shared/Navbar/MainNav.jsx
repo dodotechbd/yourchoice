@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from "react-router-dom";
 import NavSearch from "./NavSearch";
 import SubNav from "./SubNav";
 import UserNav from "./UserNav";
@@ -71,9 +72,12 @@ const MainNav = () => {
             </button>
           </div>
           <div className="flex items-center lg:gap-8">
-            <h1 className="lg:text-3xl text-2xl uppercase font-extrabold">
+            <Link
+              to={"/"}
+              className="lg:text-3xl text-2xl uppercase font-extrabold"
+            >
               YourChoice
-            </h1>
+            </Link>
             <ul className="lg:flex gap-8 font-medium text-[#2D2D2D] hidden">
               {navLink}
             </ul>
@@ -103,9 +107,12 @@ const MainNav = () => {
           </button>
         </div>
         <div className="flex items-center gap-3">
-          <h1 className="lg:text-2xl text-2xl uppercase font-extrabold">
+          <Link
+            to={"/"}
+            className="lg:text-2xl text-2xl uppercase font-extrabold"
+          >
             YourChoice
-          </h1>
+          </Link>
           <SubNav menu={isMenu} hideTip closeMenu={() => setIsMenu(false)} />
         </div>
         <UserNav scroll />
