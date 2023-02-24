@@ -5,7 +5,7 @@ import { HiArrowLongLeft } from "react-icons/hi2";
 import { IoClose } from "react-icons/io5";
 import { TfiAngleRight } from "react-icons/tfi";
 
-const SubNav = ({ menu, closeMenu }) => {
+const SubNav = ({ menu, closeMenu, hideTip }) => {
   const [navData, setNavData] = useState("");
   const [menuData, setMenuData] = useState("");
   const [subMenuData, setSubMenuData] = useState("");
@@ -35,7 +35,7 @@ const SubNav = ({ menu, closeMenu }) => {
       />
       <div
         className={`fixed z-10 overflow-auto lg:hidden bg-white duration-700 text-gray-800 w-[86%] h-full top-0 ${
-          menu ? "left-0" : "left-[-500px]"
+          menu ? "left-0" : "md:left-[-1000px] left-[-500px]"
         }`}
       >
         <div className="flex items-center justify-between px-4 py-3">
@@ -154,7 +154,7 @@ const SubNav = ({ menu, closeMenu }) => {
           )}
         </div>
       </div>
-      <div className="lg:block hidden px-4 pt-6">
+      <div className={`lg:block hidden px-4 ${hideTip ? "pt-4 font-medium" : "pt-6"}`}>
         <ul className="lg:flex items-center gap-6 text-gray-700">
           {navData && (
             <>
@@ -174,7 +174,7 @@ const SubNav = ({ menu, closeMenu }) => {
                     >
                       {item?.name}
                     </button>
-                    {item?.tip && (
+                    {item?.tip && !hideTip && (
                       <div className="absolute text-white text-sm capitalize -top-5 text-right w-full">
                         <button
                           style={{
@@ -197,7 +197,7 @@ const SubNav = ({ menu, closeMenu }) => {
                     initial={{ y: -10 }}
                     whileInView={{ y: 0 }}
                     transition={{ duration: 0.001 }}
-                    className={`absolute ${
+                    className={`absolute z-10 ${
                       isHover !== idx + 1 && "hidden"
                     } transition duration-500 left-0 bg-white shadow-[15px_0_15px_0px_rgba(0,0,0,0.2)] px-4 flex items-start py-5 w-full min-h-[50%]`}
                   >

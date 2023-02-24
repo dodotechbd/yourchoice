@@ -1,5 +1,9 @@
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-
+const variants = {
+  open: { opacity: 1, y: 0 },
+  closed: { opacity: 0, y: "-100%" },
+};
 const MainCategory = () => {
   const [hover, setHover] = useState("");
   const [items, setItems] = useState([]);
@@ -10,6 +14,7 @@ const MainCategory = () => {
   useEffect(() => {
     fetchItems();
   }, []);
+
   return (
     <div className="grid lg:grid-cols-3">
       {items?.map((item, idx) => (
@@ -17,20 +22,26 @@ const MainCategory = () => {
           onMouseEnter={() => setHover(idx + 1)}
           onMouseLeave={() => setHover("")}
           key={idx}
-          className="w-full h-full relative"
+          className="w-full h-full"
         >
-          <img
-            src={item?.img}
-            alt=""
-            className={`relative object-cover object-center ${
-              hover === idx + 1 ? "scale-110 z-[-3] duration-500" : "100 z-[-2]"
+          <div
+            className={`left-0 top-0 w-full lg:h-96 h-80 flex flex-col justify-center text-white text-center duration-700 bg-no-repeat ${
+              hover === idx + 1 ? "pt-12" : "py-12"
             }`}
-          />
-          <div className="absolute left-0 top-0 mt-12 w-full h-full flex flex-col justify-center text-white text-center">
-            <div className="mx-auto">
+            style={{
+              backgroundImage: `url(${item?.img})`,
+              backgroundPosition: "center",
+              backgroundSize: `${hover === idx + 1 ? "110%" : "100%"}`,
+            }}
+          >
+            <motion.div
+              animate={hover === idx + 1 ? "open" : "closed"}
+              variants={variants}
+              className="mx-auto"
+            >
               <div className="w-12 h-[2px] bg-white"></div>
               <div className="w-12 h-[2px] rotate-90 bg-white"></div>
-            </div>
+            </motion.div>
             <h1 className="text-4xl font-semibold mt-8">{item?.name}</h1>
             <p className="font-medium mt-2">Sale up to {item?.discount}% off</p>
             <a
