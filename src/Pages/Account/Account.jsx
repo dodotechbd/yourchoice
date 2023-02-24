@@ -2,7 +2,7 @@ import React from "react";
 
 const Account = () => {
   return (
-    <div className="mt-6 flex items-start justify-start container mx-4">
+    <div className="mt-6 lg:flex items-start justify-start container mx-4">
       <div className="w-full">
         <h1 className="text-3xl uppercase">Sign In</h1>
         <h4 className="font-bold text-lg mt-12 text-[#232323]">Login</h4>
