@@ -5,14 +5,15 @@ import {
   HiOutlineShoppingCart,
   HiOutlineUserCircle
 } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const UserNav = () => {
   return (
     <>
       <div className="hidden text-2xl lg:flex gap-5 justify-end items-center">
-        <button className="">
+        <Link to={"account"} className="">
           <HiOutlineUserCircle />
-        </button>
+        </Link>
         <button className="">
           <HiOutlineHeart />
         </button>
@@ -24,9 +25,9 @@ const UserNav = () => {
         </button>
       </div>
       <div className="lg:hidden w-full flex gap-5 justify-end items-center text-2xl">
-        <button className="">
+        <Link to={"account"} className="">
           <HiOutlineUserCircle />
-        </button>
+        </Link>
         <button className="">
           <HiOutlineShoppingCart />
         </button>

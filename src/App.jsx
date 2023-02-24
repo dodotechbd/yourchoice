@@ -1,14 +1,17 @@
 import React from "react";
-import Home from "./Pages/Home/Home";
+import { Route, Routes } from "react-router-dom";
 import Nav from "./Pages/Shared/Navbar/Nav";
-import Shop from "./Pages/Shop/Shop";
+import { publicRoutes } from "./Routes/publicRoutes";
 
 const App = () => {
   return (
     <div>
       <Nav />
-      <Home />
-      <Shop />
+      <Routes>
+        {publicRoutes.map(({ path, Component }, index) => (
+          <Route key={index} path={path} element={<Component />} />
+        ))}
+      </Routes>
     </div>
   );
 };
