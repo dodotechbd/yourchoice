@@ -9,7 +9,7 @@ import {
 const UserNav = () => {
   return (
     <>
-      <div className="hidden w-full text-2xl lg:flex gap-5 justify-end items-center">
+      <div className="hidden text-2xl lg:flex gap-5 justify-end items-center">
         <button className="">
           <HiOutlineUserCircle />
         </button>

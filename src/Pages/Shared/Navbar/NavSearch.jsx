@@ -29,7 +29,7 @@ const NavSearch = ({ search, closeSearch }) => {
       />
       <div
         className={`fixed z-10 top-0 left-0 lg:hidden duration-700 text-gray-800 w-11/12 h-full bg-white ${
-          search ? "left-0" : "left-[-5000px]"
+          search ? "left-0" : "md:left-[-1000px] left-[-500px]"
         }`}
       >
         <div className="flex items-center justify-between px-4 py-3">

@@ -25,13 +25,13 @@ const MainCategory = () => {
           className="w-full h-full"
         >
           <div
-            className={`left-0 top-0 w-full lg:h-96 h-80 flex flex-col justify-center text-white text-center duration-500 bg-no-repeat ${
+            className={`left-0 top-0 w-full lg:h-96 h-80 flex flex-col justify-center text-white text-center duration-700 bg-no-repeat ${
               hover === idx + 1 ? "pt-12" : "py-12"
             }`}
             style={{
               backgroundImage: `url(${item?.img})`,
               backgroundPosition: "center",
-              backgroundSize: `${hover === idx + 1 ? "120%" : "100%"}`,
+              backgroundSize: `${hover === idx + 1 ? "110%" : "100%"}`,
             }}
           >
             <motion.div
