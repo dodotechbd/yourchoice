@@ -20,7 +20,7 @@ const UserNav = () => {
   return (
     <>
       <div className="hidden text-2xl lg:flex gap-5 justify-end items-center">
-        <Link to={"account"} className="">
+        <Link to={user ? "profile" : "account"} className="">
           <HiOutlineUserCircle />
         </Link>
         <button className="">
