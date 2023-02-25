@@ -93,7 +93,7 @@ const MainNav = () => {
             ? styles.active
             : styles.hidden
         }
-        className="bg-white flex px-4 z-50 shadow-xl items-center justify-between w-screen py-2 lg:py-0 fixed left-0 duration-500 top-0"
+        className="bg-white flex px-4 z-40 shadow-xl items-center justify-between w-screen py-2 lg:py-0 fixed left-0 duration-500 top-0"
       >
         <div className="lg:hidden flex justify-start gap-6 w-full items-center">
           <button>
