@@ -1,0 +1,43 @@
+:root {
+  --height: 60%;
+}
+
+.loading {
+  width: 60px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.loading span {
+  display: inline-block;
+  width: 25%;
+  height: var(--height);
+  background-color: white;
+}
+
+.loading span:nth-of-type(1) {
+  animation: anime1 1s ease-in-out infinite;
+}
+.loading span:nth-of-type(2) {
+  animation: anime1 1s ease-in-out 0.15s infinite;
+}
+.loading span:nth-of-type(3) {
+  animation: anime1 1s ease-in-out 0.3s infinite;
+}
+
+@keyframes anime1 {
+  from {
+    height: var(--height);
+  }
+  40% {
+    height: 100%;
+  }
+  80% {
+    height: var(--height);
+  }
+  to {
+    height: var(--height);
+  }
+}
